@@ -6,6 +6,14 @@
 ## Write a short comment describing this function:
 ##The code provided defines a function called make Vector, which creates a special vector-like object represented as a list containing several functions to manipulate its values and store a mean value
 
+  get <- function() x
+  setmean <- function(mean) m <<- mean
+  getmean <- function() m
+  list(set = set, get = get,
+       setmean = setmean,
+       getmean = getmean)
+
+
 
 makeVector <- function(x = numeric()) {
   m <- NULL
@@ -13,12 +21,6 @@ makeVector <- function(x = numeric()) {
     x <<- y
     m <<- NULL
   }
-  get <- function() x
-  setmean <- function(mean) m <<- mean
-  getmean <- function() m
-  list(set = set, get = get,
-       setmean = setmean,
-       getmean = getmean)
         
 # Create a special vector-like object
 myVector <- makeVector()
